@@ -33,3 +33,6 @@ debian/:
 
 deb: gz debian
 	debuild -us -uc
+
+docker:
+	docker build -t eyedeekay/i2p-ssh-config .
