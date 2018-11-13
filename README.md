@@ -9,4 +9,4 @@ new tunnels.d folder. It consists of an alternate set of configuration files for
 OpenSSH and i2pd that automatically configures the sshd with fresh, i2p-only
 keys, only on the localhost, on port 7622. Then it forwards that new SSH service
 to the i2p network. All automatically. It doesn't have all the features I want
-it to yet, but it should work.
+it to yet, but it should work. I have not tested the systemd units yet.
