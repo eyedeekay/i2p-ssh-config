@@ -18,7 +18,38 @@ monolithic tunnels.conf file, it becomes possible to express the configuration
 of a service that you wish to forward to i2p as an easy-to-install package. In
 this case it's OpenSSH sshd.
 
+Getting genmkfile from Whonix
+-----------------------------
+
+genmkfile is pretty awesome for deterministically encapsulating configuration.
+
+  1. Add [Whonix's Signing Key](https://www.whonix.org/wiki/Whonix_Signing_Key).
+
+```sh
+sudo apt-key --keyring /etc/apt/trusted.gpg.d/whonix.gpg adv --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA
+```
+
+  2. Add Whonix's APT repository.
+
+```sh
+echo "deb http://deb.whonix.org stretch main" | sudo tee /etc/apt/sources.list.d/whonix.list
+```
+
+  3. Update your package lists.
+
+```sh
+sudo apt-get update
+```
+
+  4. Install `genmkfile`.
+
+```sh
+sudo apt-get install genmkfile
+```
+
 If you have debuild and make installed, you can build the experimental package
 by running
 
-        make deb
+```sh
+make deb
+```
