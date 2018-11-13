@@ -9,4 +9,4 @@ RUN make deb
 USER root
 RUN apt-get install -y ../i2p-ssh-config*.deb
 RUN mkdir -p /run/sshd
-CMD /usr/sbin/i2p-sshd
+CMD /usr/sbin/i2p-sshd -D
