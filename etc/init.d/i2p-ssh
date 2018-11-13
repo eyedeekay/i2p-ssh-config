@@ -60,9 +60,9 @@ check_dev_null() {
 
 check_privsep_dir() {
     # Create the PrivSep empty dir if necessary
-    if [ ! -d /run/sshd ]; then
-	mkdir /run/sshd
-	chmod 0755 /run/sshd
+    if [ ! -d /run/i2p-sshd ]; then
+	mkdir /run/i2p-sshd
+	chmod 0755 /run/i2p-sshd
     fi
 }
 

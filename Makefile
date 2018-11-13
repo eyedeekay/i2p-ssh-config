@@ -36,3 +36,6 @@ deb: gz debian
 
 docker:
 	docker build -t eyedeekay/i2p-ssh-config .
+
+docker-run:
+	docker run -it --rm --name i2p-sshd eyedeekay/i2p-ssh-config
