@@ -10,3 +10,13 @@ OpenSSH and i2pd that automatically configures the sshd with fresh, i2p-only
 keys, only on the localhost, on port 7622. Then it forwards that new SSH service
 to the i2p network. All automatically. It doesn't have all the features I want
 it to yet, but it should work. I have not tested the systemd units yet.
+
+The larger point is that with the use of /etc/i2pd/tunnels.d instead of a single
+monolithic tunnels.conf file, it becomes possible to express the configuration
+of a service that you wish to forward to i2p as an easy-to-install package. In
+this case it's OpenSSH sshd.
+
+If you have debuild and make installed, you can build the experimental package
+by running
+
+        make deb

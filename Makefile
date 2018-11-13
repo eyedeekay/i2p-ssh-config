@@ -23,14 +23,13 @@ VERSION=0.1
 EMAIL=notreal@eventually.com
 NAME=i2p-ssh-config
 
-dh:
-	debmake -p i2p-ssh-config \
-		-u "$(VERSION)" \
-		-e "$(EMAIL)" \
-		-f "$(NAME)" \
-		-t
+gz:
+	tar --exclude "./.git" --exclude "./debian" -czvf ../"$(NAME)_$(VERSION).tar.gz" .
 
-deb:
+debian/: gz
 	dh_make -i -n -c mit \
 		-e "$(EMAIL)" \
 		-p "$(NAME)_$(VERSION)" \
+
+deb: debian
+	debuild -us -uc
