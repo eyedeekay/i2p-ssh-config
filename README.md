@@ -47,6 +47,9 @@ sudo apt-get update
 sudo apt-get install genmkfile
 ```
 
+Building the package yourself
+-----------------------------
+
 If you have debuild and make installed, you can build the experimental package
 by running
 
