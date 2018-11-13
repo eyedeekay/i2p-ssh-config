@@ -1,0 +1,5 @@
+/etc/default/i2p-ssh
+/etc/i2p-ssh/i2p_sshd_config
+/etc/i2pd/tunnels.d/ssh.conf
+/etc/init.d/i2p-ssh
+/etc/systemd/system/i2p-sshd.service

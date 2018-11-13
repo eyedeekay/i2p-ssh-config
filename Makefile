@@ -16,3 +16,21 @@ export GENMKFILE_PATH
 export GENMKFILE_ROOT_DIR
 
 include $(GENMKFILE_PATH)/makefile-full
+
+dummy:
+
+VERSION=0.1
+EMAIL=notreal@eventually.com
+NAME=i2p-ssh-config
+
+dh:
+	debmake -p i2p-ssh-config \
+		-u "$(VERSION)" \
+		-e "$(EMAIL)" \
+		-f "$(NAME)" \
+		-t
+
+deb:
+	dh_make -i -n -c mit \
+		-e "$(EMAIL)" \
+		-p "$(NAME)_$(VERSION)" \
