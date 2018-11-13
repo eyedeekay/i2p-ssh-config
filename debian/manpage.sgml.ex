@@ -25,7 +25,7 @@ manpage.1: manpage.sgml
        allowed: see man(7), man(1). -->
   <!ENTITY dhsection   "<manvolnum>SECTION</manvolnum>">
   <!ENTITY dhemail     "<email>notreal@eventually.com</email>">
-  <!ENTITY dhusername  "lair repo key">
+  <!ENTITY dhusername  "repo key">
   <!ENTITY dhucpackage "<refentrytitle>I2p-ssh-config</refentrytitle>">
   <!ENTITY dhpackage   "i2p-ssh-config">
 

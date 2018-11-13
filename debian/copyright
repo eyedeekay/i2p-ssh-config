@@ -3,7 +3,7 @@ Upstream-Name: i2p-ssh-config
 Source: https://github.com/eyedeekay/i2p-ssh-config
 
 Files: *
-Copyright: 2018 <put author's name and email here>
+Copyright: 2018 repo key <notreal@eventually.com>
 License: MIT
 
 Files: Makefile
@@ -27,7 +27,7 @@ License: GPL-3+
  `/usr/share/common-licenses/GPL-3'.
 
 Files: debian/*
-Copyright: 2018 lair repo key <notreal@eventually.com>
+Copyright: 2018 repo key <notreal@eventually.com>
 License: MIT
 
 License: MIT

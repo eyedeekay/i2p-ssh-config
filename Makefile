@@ -26,10 +26,10 @@ NAME=i2p-ssh-config
 gz:
 	tar --exclude "./.git" --exclude "./debian" -czvf ../"$(NAME)_$(VERSION).tar.gz" .
 
-debian/: gz
+debian/:
 	dh_make -i -n -c mit \
 		-e "$(EMAIL)" \
 		-p "$(NAME)_$(VERSION)" \
 
-deb: debian
+deb: gz debian
 	debuild -us -uc

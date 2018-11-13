@@ -1,9 +1,0 @@
-#! /usr/bin/env sh
-
-if [ -f "/etc/default/i2p-ssh" ]; then
-    . /etc/default/i2p-ssh
-else
-    exit 1
-fi
-
-/usr/sbin/sshd $SSHD_OPTS $@

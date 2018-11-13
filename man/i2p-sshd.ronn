@@ -1,0 +1,38 @@
+i2p-sshd(1) -- OpenSSH and i2pd Configuration
+=============================================
+
+<span class="comment">
+# Copyright (C) 2018 repo key <notreal@eventually.com>
+# See the file COPYING for copying conditions.
+
+# Not using angle brackets in copyright notice for e-mail address, because
+# angle brackets would result in this file being non-deterministic. (There
+# must be a bug in Debian wheezy in ruby-ronn.)
+
+# Not using "##", because for some reason this comment would be visible in the
+# resulting man page.
+</span>
+
+## SYNOPSIS
+`i2p-sshd` option(s)
+
+## DESCRIPTION
+This wraps an ssh configuration for use with i2pd.
+
+## CONFIG FILE
+
+/etc/i2p-ssh/i2p_sshd_config
+
+## EXAMPLES
+`sudo service i2p-sshd restart`
+
+`i2p-sshd`
+
+## NOTES
+This is just a wrapper.
+
+## WWW
+https://github.com/eyedeekay/i2p-ssh-config
+
+## AUTHOR
+This man page has been written by repo key <notreal@eventually.com>
