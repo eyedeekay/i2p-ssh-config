@@ -15,8 +15,10 @@ SSH service to the i2p network. All automatically. It doesn't have all the
 features I want it to yet, but I've tried it and it works.
 
 It runs a totally separate sshd, with different keys than the default sshd.
-Since it depends on sshd being installed, which means that if you don't have
-OpenSSH already configured then you'll end up with a new, running sshd.
+Since it depends on sshd being installed, it attempts to detect a pre-existing
+/etc/ssh/sshd_config and if one does not exist, it stops the default sshd after
+installing the package. If someone knows a better way to do that I'd like to
+know.
 
 The larger point is that with the use of /etc/i2pd/tunnels.conf.d instead of a
 single monolithic tunnels.conf file, it becomes possible to express the
