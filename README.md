@@ -14,10 +14,11 @@ keys, only on the localhost, on port 7622. Then it forwards that new SSH service
 to the i2p network. All automatically. It doesn't have all the features I want
 it to yet, but it should work. I have not tested the systemd units yet.
 
-The larger point is that with the use of /etc/i2pd/tunnels.d instead of a single
-monolithic tunnels.conf file, it becomes possible to express the configuration
-of a service that you wish to forward to i2p as an easy-to-install package. In
-this case it's OpenSSH sshd.
+The larger point is that with the use of /etc/i2pd/tunnels.conf.d instead of a
+single monolithic tunnels.conf file, it becomes possible to express the
+configuration of a service that you wish to forward to i2p as an easy-to-install
+and easy-to create package. In this case it's OpenSSH sshd, but it could be any
+service that could benefit from being routed using sshd.
 
 Getting genmkfile from Whonix
 -----------------------------
