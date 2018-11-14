@@ -17,6 +17,8 @@ export GENMKFILE_ROOT_DIR
 
 include $(GENMKFILE_PATH)/makefile-full
 
+##Bits copied from genmkfile end here. Still the same license though.
+
 dummy:
 
 VERSION=0.1
@@ -38,4 +40,12 @@ docker:
 	docker build -t eyedeekay/i2p-ssh-config .
 
 docker-run:
-	docker run -it --rm --name i2p-sshd eyedeekay/i2p-ssh-config
+	docker run -itd --rm --name i2p-sshd eyedeekay/i2p-ssh-config
+
+docker-log:
+	docker logs -f i2p-sshd
+
+docker-launch: docker docker-run docker-log
+
+echo:
+	@echo "this thing"

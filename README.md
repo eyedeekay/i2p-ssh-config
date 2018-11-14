@@ -4,7 +4,8 @@
 
 Requires: [i2pd 2.21](https://github.com/purplei2p/i2pd/) and [genmkfile](https://github.com/whonix/genmkfile/)
 
-Optionally can be used with: [samcatd](https://github.com/eyedeekay/sam-forwarder) and [java-i2p](https://geti2p.net)
+Optionally can be used with: [samcatd](https://github.com/eyedeekay/sam-forwarder) and [java-i2p](https://geti2p.net), but
+compatibility is momentarily limited due to the current shortcomings of samcatd.
 
 Proof-of-Concept for an apt-installable ssh-over-i2p configuration using i2pd's
 new tunnels.d folder. It consists of an alternate set of configuration files for
@@ -26,7 +27,7 @@ genmkfile is pretty awesome for deterministically encapsulating configuration.
   1. Add [Whonix's Signing Key](https://www.whonix.org/wiki/Whonix_Signing_Key).
 
 ```sh
-sudo apt-key --keyring /etc/apt/trusted.gpg.d/whonix.gpg adv --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA
+    sudo apt-key --keyring /etc/apt/trusted.gpg.d/whonix.gpg adv --keyserver hkp://ipv4.pool.sks-keyservers.net:80 --recv-keys 916B8D99C38EAF5E8ADC7A2A8D66066A2EEACCDA
 ```
 
   2. Add Whonix's APT repository.
