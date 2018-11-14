@@ -36,6 +36,34 @@ debian/:
 deb: gz debian
 	debuild -us -uc
 
+signed: gz debian
+	debuild
+
+release: signed gothub-current upload
+
+upload:
+	$(GOTHUB_BIN) upload \
+		--tag current \
+		--label "$(NAME)" \
+		--name "$(NAME)" \
+		--replace \
+		--file "../$(NAME)_$(VERSION)_all.deb"
+
+GOTHUB_BIN=~/.go/bin/gothub
+
+export GITHUB_USER=eyedeekay
+export GITHUB_REPO=i2p-ssh-config
+
+gothub-delete-current:
+	$(GOTHUB_BIN) delete \
+		--tag current; true
+
+gothub-current: gothub-delete-current
+	$(GOTHUB_BIN) release \
+		--tag current \
+		--name i2p-ssh-config \
+		--description "zero-configuration ssh-over-i2p"
+
 docker:
 	docker build -t eyedeekay/i2p-ssh-config .
 
