@@ -24,6 +24,10 @@ case "$1" in
         ssh-keygen -f /etc/i2p-ssh/i2p_ssh_host_rsa_key -N '' -t rsa
         ssh-keygen -f /etc/i2p-ssh/i2p_ssh_host_ecdsa_key -N '' -t ecdsa
         ssh-keygen -f /etc/i2p-ssh/i2p_ssh_host_ed25519_key -N '' -t ed25519
+        if [ -f /etc/i2p-ssh/no_sshd_config ]; then
+            service sshd stop
+        fi
+        rm -f /etc/i2p-ssh/no_sshd_config
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
