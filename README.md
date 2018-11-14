@@ -24,7 +24,7 @@ The larger point is that with the use of /etc/i2pd/tunnels.conf.d instead of a
 single monolithic tunnels.conf file, it becomes possible to express the
 configuration of a service that you wish to forward to i2p as an easy-to-install
 and easy-to create package. In this case it's OpenSSH sshd, but it could be any
-service that could benefit from being routed using sshd.
+service that could benefit from being routed using i2p.
 
 Getting genmkfile from Whonix
 -----------------------------
